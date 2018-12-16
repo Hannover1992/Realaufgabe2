@@ -1,4 +1,4 @@
-public class Suitcase{
+public class Suitcase extends Load{
 	private int weight;
 
 	public Suitcase (int weight){
@@ -9,6 +9,13 @@ public class Suitcase{
 	//Not for this class
 	}
 
+	public void remove(Load load){
+	//Not for this class
+	}
+
+	public void add(Load load){
+	//Not for this class
+	}
 
 	public void remove(Suitcase suitcase){
 	//Not for this class
