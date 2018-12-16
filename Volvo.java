@@ -1,4 +1,4 @@
-public class Volvo implements Car{
+public class Volvo extends Car{
 		private int weight = 1400;
 
 		public Volvo (){
