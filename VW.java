@@ -7,6 +7,13 @@ public class VW extends Car{
 	public void add(Car car){
 			//ist leaf so the method not applaybel for this class
 	}
+	public void add(Load load){
+			//ist leaf so the method not applaybel for this class
+	}
+
+	public void remove(Load load){
+			//ist leaf so the method not applaybel for this class
+	}
 
 	public void remove(Car car){
 			//ist leaf so the method not applaybel for this class

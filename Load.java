@@ -1,7 +1,7 @@
-public interface Load{
-	public void add(Load load);
-	public void remove(Load load);
-	public Load getChild(int i);
-	public int getWeight();
-	public void print();
+public abstract class Load{
+	public abstract void add(Load load);
+	public abstract void remove(Load load);
+	public abstract Load getChild(int i);
+	public abstract int getWeight();
+	public abstract void print();
 }

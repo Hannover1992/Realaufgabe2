@@ -9,12 +9,14 @@ public class Suitcase{
 	//Not for this class
 	}
 
+
 	public void remove(Suitcase suitcase){
 	//Not for this class
 	}
 
 	public Suitcase getChild(int i){
 	//Not for this class
+	return null;
 	}
 
 	public int getWeight(){

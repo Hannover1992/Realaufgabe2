@@ -12,6 +12,14 @@ public class Fiat implements Car{
 			//ist leaf so the method not applaybel for this class
 		}
 
+		public void add(Load load){
+				//ist leaf so the method not applaybel for this class
+		}
+
+		public void remove(Load load){
+				//ist leaf so the method not applaybel for this class
+		}
+
 		public Car getChild(int i){
 			//ist leaf so the method not applaybel for this class
 		}
