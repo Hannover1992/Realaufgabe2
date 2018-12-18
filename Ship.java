@@ -7,9 +7,6 @@ public class Ship implements IShip
 {
 	//in den UML steht 0..1 als 0 bis 1 container somit Tilt abstrackt 
 	private	Container container;
-	Ship(Container container){
-		this.container = container;
-	}
 
 	Container getContainer(){
 		return this.container;
@@ -17,27 +14,35 @@ public class Ship implements IShip
 
 	void setContainer(Container container){
 		this.container = container;
-		notifyObserver();
+		this.notifyIObserver();
 	}
+	private int state;
+
+
+	public int getState() {
+		return state;
+	} 
 
 	int getWeight(){
 		return this.getContainer().getWeight();
 	}
 
-	private ArrayList<Observer> users = new ArrayList<Observer>();	
+	private ArrayList<IObserver> users = new ArrayList<IObserver>();	
 	
-	public void addObserver(Observer o){
+	public void addIObserver(IObserver o){
 		users.add(o);
 	}
 
-	public void notifyObserver(){
-		for(Observer user :users){
-			user.update();
+	@Override 
+	public void removeIObserver(IObserver o){
+		users.remove(o);
+	}
+
+	public void notifyIObserver(){
+		for(IObserver user :users){
+			user.update(this.getContainer().getWeight());
 		}
 	}
 
-	public void update(){
-
-	}
 
 }

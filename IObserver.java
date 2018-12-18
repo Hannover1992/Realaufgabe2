@@ -1,4 +1,4 @@
-public Interface IObserver
+public interface IObserver
 {
-	public void update();	
+	public void update(int state);	
 }

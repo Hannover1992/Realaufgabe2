@@ -1,25 +1,12 @@
-public class Container{
-	private Load load;
+class Container{
+	Load load;
 
 	Container(Load load){
 		this.load = load;
 	}
 
-	Load getLoad()
-	{
-		return this.load;
-	}
-
-	void setLoad(Load load)
-	{
-		this.load = load;
-	}
 	int getWeight(){
 		return this.load.getWeight();
-	}
-
-	void print(){
-	System.out.println("Container Weight:"+this.getWeight());
 	}
 
 	public static void main(String[] args){
@@ -31,9 +18,11 @@ public class Container{
 	box1.add(car2);
 	box1.add(sui1);
 	Container container1 = new  Container(box1);
-	container1.print();
-	Ship ship1 = new Ship(container1);
-
+	Container container2 = new  Container(box1);
+	Ship ship1 = new Ship();
+	MaxWeight maxWeight1 = new MaxWeight();
+	ship1.addIObserver(maxWeight1);
+	ship1.setContainer(container2);
 
 	}
 
